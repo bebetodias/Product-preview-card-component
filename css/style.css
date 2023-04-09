@@ -60,6 +60,13 @@ h1 {
   width: 343px;
 }
 
+.desktop {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+
 .content {
   padding: 2rem;
 }
@@ -108,14 +115,16 @@ h1 {
   color: hsl(228, 45%, 44%);
 }
 
-.prod-image {
-  content: url("../images/image-product-mobile.jpg");
-}
-
 @media screen and (min-width: 600px) {
   .card {
     width: 600px;
     flex-direction: row;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
   }
 
   .card figure {
