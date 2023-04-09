@@ -1,0 +1,131 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --fs-base: 0.875rem;
+  --fs-title: calc(var(--fs-base) * 2.25);
+  --ff-text: "Montserrat", sans-serif;
+  --ff-title: "Fraunces", serif;
+}
+
+body {
+  font-family: var(--ff-text);
+  font-size: var(--fs-base);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-cream);
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  color: var(--neutral-dark-grayish-blue);
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: var(--fs-title);
+  font-family: var(--ff-title);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--neutral-white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 343px;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  padding-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.price {
+  margin: 2rem 0;
+  line-height: 0.85;
+  display: flex;
+}
+
+.price .by {
+  font-size: var(--fs-title);
+  font-family: var(--ff-title);
+  color: var(--primary-dark-cyan);
+  padding-right: 1rem;
+}
+
+.btn {
+  background-color: var(--primary-dark-cyan);
+  color: var(--neutral-white);
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon {
+  width: var(--ff-text);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.prod-image {
+  content: url("../images/image-product-mobile.jpg");
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 600px;
+    flex-direction: row;
+  }
+
+  .card figure {
+    flex: 0 1 auto;
+  }
+
+  .card .content {
+    flex: 1 0 300px;
+  }
+  .prod-image {
+    content: url("../images/image-product-desktop.jpg");
+  }
+}
