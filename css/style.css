@@ -60,13 +60,6 @@ h1 {
   width: 343px;
 }
 
-.desktop {
-  display: none;
-}
-.mobile {
-  display: block;
-}
-
 .content {
   padding: 2rem;
 }
@@ -122,12 +115,6 @@ h1 {
   .card {
     width: 600px;
     flex-direction: row;
-  }
-  .desktop {
-    display: block;
-  }
-  .mobile {
-    display: none;
   }
 
   .card figure {
